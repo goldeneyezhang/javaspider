@@ -22,7 +22,7 @@ public class App
     public static void main( String[] args )
     {
     	//TestGet();
-    	try {
+    	/*try {
 			//TestPost();
 			TestSpider s=new TestSpider();
 			s.downloadPage("http://www.cainiaobangbang.com/");
@@ -30,6 +30,13 @@ public class App
 			// TODO Auto-generated catch block
 			e.printStackTrace();
 		} catch (Exception e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}*/
+    	MyCrawler crawler=new MyCrawler();
+    	try {
+			crawler.crawling(new String[]{"http://www.cainiaobangbang.com"});
+		} catch (IOException e) {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
 		}

@@ -4,6 +4,10 @@ import java.io.DataOutputStream;
 import java.io.File;
 import java.io.FileOutputStream;
 import java.io.IOException;
+import java.util.Arrays;
+import java.util.List;
+import java.util.function.Predicate;
+import java.util.stream.Collectors;
 
 import org.apache.http.Header;
 import org.apache.http.HttpException;
@@ -74,8 +78,9 @@ public class DownloadFile {
 			//4.处理HTTP响应内容
 			byte[] responseBody=EntityUtils.toByteArray(response.getEntity());
 			//根据网页URL生成保存时的文件名
-			Header[] header=response.getAllHeaders();
-			filePath="temp\\"+getFileNameByUrl(url,header[0].getValue());
+			Header[] headers=response.getAllHeaders();
+			List<Header> headerList = Arrays.asList(headers);  
+			filePath="temp\\"+getFileNameByUrl(url,filterHeaders(headerList,HeaderPredicate.iscontentType()).get(0).getValue());
 			saveToLocal(responseBody,filePath);
 		}catch(IOException e){
 			//发生致命的异常，可能是协议不对或者返回的内容有问题
@@ -86,4 +91,7 @@ public class DownloadFile {
 		}
 		return filePath;
 	}
+	 public List<Header> filterHeaders (List<Header> headers, Predicate<Header> predicate) {
+	        return headers.stream().filter( predicate ).collect(Collectors.<Header>toList());
+	    }
 }
