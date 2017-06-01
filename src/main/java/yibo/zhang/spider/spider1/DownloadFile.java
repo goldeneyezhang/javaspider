@@ -6,6 +6,7 @@ import java.io.FileOutputStream;
 import java.io.IOException;
 
 import org.apache.http.Header;
+import org.apache.http.HttpException;
 import org.apache.http.HttpStatus;
 import org.apache.http.client.HttpClient;
 import org.apache.http.client.config.RequestConfig;
@@ -50,7 +51,7 @@ public class DownloadFile {
 		}
 	}
 	//下载URL指向的网页
-	public String downloadFile(String url){
+	public String downloadFile(String url) throws IOException{
 		String filePath=null;
 		//1.生成HttpClient对象并设置参数
 		CloseableHttpClient httpClient=HttpClients.createDefault();
@@ -74,7 +75,15 @@ public class DownloadFile {
 			byte[] responseBody=EntityUtils.toByteArray(response.getEntity());
 			//根据网页URL生成保存时的文件名
 			Header[] header=response.getAllHeaders();
-			filePath="temp\\"+getFileNameByUrl(url,.)
+			filePath="temp\\"+getFileNameByUrl(url,header[0].getValue());
+			saveToLocal(responseBody,filePath);
+		}catch(IOException e){
+			//发生致命的异常，可能是协议不对或者返回的内容有问题
+			e.printStackTrace();
+		}finally{
+			//释放连接
+			httpGet.releaseConnection();
 		}
+		return filePath;
 	}
 }
