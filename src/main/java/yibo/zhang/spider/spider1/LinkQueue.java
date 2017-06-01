@@ -10,7 +10,7 @@ public class LinkQueue {
 	//待访问的URL集合
 	private static PriorityQueue unVisitedUrl=new PriorityQueue();
 	//获得URL队列
-	public static Queue getUnVisitedUrl(){
+	public static PriorityQueue getUnVisitedUrl(){
 		return unVisitedUrl;
 	}
 	//添加到访问过的URL队列中
