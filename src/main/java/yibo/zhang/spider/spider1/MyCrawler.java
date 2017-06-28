@@ -52,7 +52,7 @@ public class MyCrawler {
 	{
 		MyCrawler crawler=new MyCrawler();
 		try {
-			crawler.crawling(new String[]{"https://www.cainiaobangbang.com"});
+			crawler.crawling(new String[]{"http://www.cainiaobangbang.com"});
 		} catch (IOException e) {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
