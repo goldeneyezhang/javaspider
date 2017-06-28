@@ -22,7 +22,7 @@ public class CrawlUrl implements Serializable {
 	private Date timeToLive;//过期时间
 	private String title;//文章名称
 	private String type;//文章类型
-	private String[] urlRefrences;//引用的链接
+	private CrawlUrl[] urlRefrences;//引用的链接
 	private int layer;//爬取的层次，从种子开始，依次为第0层，1层
 	public String getOriUrl() {
 		return oriUrl;
@@ -114,10 +114,10 @@ public class CrawlUrl implements Serializable {
 	public void setType(String type) {
 		this.type = type;
 	}
-	public String[] getUrlRefrences() {
+	public CrawlUrl[] getUrlRefrences() {
 		return urlRefrences;
 	}
-	public void setUrlRefrences(String[] urlRefrences) {
+	public void setUrlRefrences(CrawlUrl[] urlRefrences) {
 		this.urlRefrences = urlRefrences;
 	}
 	public int getLayer() {

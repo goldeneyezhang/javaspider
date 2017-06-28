@@ -6,6 +6,10 @@ import java.util.Set;
 import org.htmlparser.filters.LinkStringFilter;
 
 public class MyCrawler {
+	private ComputeUrl computeUrl=null;
+	public MyCrawler(){
+		computeUrl=new PageRankComputeUrl();
+	}
 	//使用种子初始化url队列
 	private void initCrawlerWithSeeds(String[] seeds)
 	{
@@ -16,7 +20,7 @@ public class MyCrawler {
 	public void crawling(String[] seeds) throws IOException
 	{
 		//定义过滤器，提取以http://www.cainiaobangbang.com开头的链接
-		LinkStringFilter filter=new LinkStringFilter("www.cainiaoibangbang.com");
+		LinkStringFilter filter=new LinkStringFilter("www.cainiaobangbang.com");
 		//初始化URL队列
 		initCrawlerWithSeeds(seeds);
 		//循环条件：待抓取的链接不空且抓取的网页不多于1000
@@ -28,7 +32,10 @@ public class MyCrawler {
 				continue;
 			DownloadFile downLoader=new DownloadFile();
 			//下载网页
-			downLoader.downloadFile(visitUrl);
+			String content=downLoader.downloadFile(visitUrl);
+			if(computeUrl.accept(visitUrl, content)){
+				continue;
+			}
 			//该URL放入已访问的URL中
 			LinkQueue.addVisitedUrl(visitUrl);
 			//提取出下载网页中的URL
@@ -38,6 +45,17 @@ public class MyCrawler {
 			{
 				LinkQueue.addUnvisitedUrl(link);
 			}
+		}
+	}
+	//main方法入口
+	public static void main(String[] args)
+	{
+		MyCrawler crawler=new MyCrawler();
+		try {
+			crawler.crawling(new String[]{"https://www.cainiaobangbang.com"});
+		} catch (IOException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
 		}
 	}
 }
