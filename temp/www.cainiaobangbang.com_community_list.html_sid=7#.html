@@ -1,0 +1,606 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8" />
+<title>鸟巢-菜鸟帮帮</title>
+<link rel="shortcut icon" type="image/x-icon" href="/cnbb.ico" media="screen" />
+<script src="/Public/js/jquery.min.js"></script>
+<script src="/Public/js/layer/layer.js"></script>
+<script type="text/javascript">
+    //百度统计
+
+    var _hmt = _hmt || [];
+    (function() {
+      var hm = document.createElement("script");
+      hm.src = "https://hm.baidu.com/hm.js?7a83b9c99272e7eb80fa5055220a4ef0";
+      var s = document.getElementsByTagName("script")[0]; 
+      s.parentNode.insertBefore(hm, s);
+    })();
+
+    //网站客服
+    document.write('<script src="\/\/assets.kf5.com\/supportbox\/main.js?' + (new Date).getDay() + '" id="kf5-provide-supportBox" kf5-domain="cainiaobangbang1.kf5.com" charset="utf-8"><\/script>');</script>
+<link rel="stylesheet" href="/Public/js/lib/lightbox/css/lightbox.css">
+<script src="/Public/js/lib/lightbox/js/lightbox.js"></script>
+<link rel="stylesheet" type="text/css" href="/Public/css/public_s1.css?v1.3">
+<link rel="stylesheet" href="/Public/css/log/cjlt.css?v1" />
+<link rel="stylesheet" type="text/css" href="/Public/css/log/plyr.css"/>
+<link rel="stylesheet" type="text/css" href="/Public/css/log/paging.css"/>
+</head>
+<body>
+<div class="header">
+<div class="header-info">
+<a class="cnbb-logo" href="/index.html"><img src="/Public/img/img_s1/cnbb_logo.png"/></a>
+<div class="header-search">
+<div class="search-box">
+<div class="search-class searchClass" id="searchClass">
+<ul class="class-info">
+<li class="class-item checked" data="1">岗位</li>
+<li class="class-item" data="0">公司</li>
+</ul>
+<i></i>
+</div>
+<input class="search-input" id="search" type="text" placeholder="请输入岗位名称" value=""/>
+<input type="hidden" name="" id="keyword_by" value="">
+<input type="hidden" name="" id="keyword" value="">
+<div class="search-relation js_searchhint_res" id="js_searchhint_res" style="display: none">
+</div>
+</div>
+<a class="search-btn keyword" href="javascript:;"><i></i></a>
+</div>
+<div class="header-nav">
+<a class="sub-nav " href="/index.html">首页</a>
+<a class="sub-nav " href="/postList.html">岗位</a>
+<a class="sub-nav active" href="/community/list.html">社区</a>
+<a class="nav-btn" href="/login.html">学生入口</a>
+<a class="nav-btn" href="/hrLogin.html">企业入口</a> </div>
+</div>
+</div>
+<script type="text/javascript">
+        $(function () {
+            //        个人中心下拉菜单
+            $(".personal-center .personal-bar").mouseenter(function () {
+                $(this).next("div").slideDown();
+            });
+            $(".personal-center").mouseleave(function () {
+                $(this).find(".personal-center-nav").hide();
+
+            });
+            
+            //        搜索岗位/公司选择
+            $(".search-class").on({
+                click:function () {
+                    var ulH = $(".class-info").height();
+                    if (ulH == 36){
+                        ulH = $(".class-info").height("auto");
+                    $(this).find(".class-item").click(function () {
+                        $('#search').attr('placeholder','请输入'+$(this).text()+'名称').attr('data-type',$(this).attr('data'));
+                        $(this).parent().prepend($(this));
+                        $(this).addClass("checked").siblings().removeClass("checked");
+                    })
+                    }else {
+                        ulH = $(".class-info").height("36");
+                    }
+                },mouseleave:function () {
+                    $(".class-info").height("36");
+                }
+            });
+        });
+        </script>
+<div class="content">
+<div class="con clearfix">
+<div class="con-l">
+<article class="tabs">
+<div class="con-l-bar">
+<a href="/community/list.html?sid=7" class="bar-a1">鸟巢</a>
+</div>
+<div class="panels clearfix">
+<div class="panel">
+<div class="pan-info">
+<div class="static">
+<img src="/Public/img/log/stick.png"/>
+</div> 
+<a href="/community/detail/787.html" target="_blank" style="outline: none;">
+<p class="p1">活动规则请看我我我我我我我我！</p>
+<p class="p2">你写实习故事，我发万元大奖
+参与方式：
+1.在菜鸟帮帮微信平台回复“实习”，获取活动参赛链接。
+2. 在参赛链接上分享你的实习故事，并上传至少三张与实习相关的照片。
+3. 组委会还会为优秀的学生进行专访并为其撰写稿件，有兴趣的同学也可以添加活动客服微信：wyn160403申请专访资格。
+4.组委会人员每周五会审核收集到的实习内容，审核通过的优质内容，会同步发送到微信平台、菜鸟帮帮社区以及相关媒体，为大家积攒人气。
+*唯有审核通过并发布的文章，才有参赛资格。
+5. 暑假实习期结束后，组委会人员会将所有审核通过的优质内容汇总并进行专题投票活动，赢取200-3000元不等的奖金，并有机会获得优秀实习日志奖。
+奖项设置：
+一等奖：3000元1名
+二等奖：2000元1名
+三等奖：1000元1名
+参与奖：200元20名
+我的天哪，有23人可以获奖？！
+参与本次活动的同学，还有机会入围“陆家嘴金融城未来金融家”活动，
+争夺“实习英雄”称号，获得更高的奖励，敬请期待！
+</p>
+</a>
+<div class="pic1">
+<a class="box_pic" href="http://r2.cainiaobangbang.com/17/019d390e5161f2/4444.gif" data-lightbox="example-787">
+<img src="http://r2.cainiaobangbang.com/17/019d390e5161f2/4444.gif"/>
+</a>
+</div>
+<div class="evaluate">
+<div class="eval-i">
+<img class="eval-i1" src="/Public/img/log/admin-avatar.jpg" alt="" />
+<span class="eval-sp">菜鸟帮帮官方</span>
+<span class="eval-sp2">6天前</span>
+<p class="comment">
+<img src="/Public/img/log/comment.png"/>
+<span>3</span>
+</p>
+<p class="praise" data-iszan="" data-count="14">
+<span class="pra-i1">
+<img src="/Public/img/log/praise.png"/>
+</span> <span class="pra-sp1">14</span>
+</p>
+</div>
+</div>
+</div><div class="pan-info">
+<a href="/community/detail/799.html" target="_blank" style="outline: none;">
+<p class="p1">实习</p>
+<p class="p2">实习不好找呀</p>
+</a>
+<div class="evaluate">
+<div class="eval-i">
+<img class="eval-i1" src="/Public/img/log/user-tx2.png" alt="" />
+<span class="eval-sp">杰瑞</span>
+<span class="eval-sp2">18小时前</span>
+<p class="comment">
+<img src="/Public/img/log/comment.png"/>
+<span>0</span>
+</p>
+<p class="praise" data-iszan="" data-count="0">
+<span class="pra-i1">
+<img src="/Public/img/log/praise.png"/>
+</span> <span class="pra-sp1">0</span>
+</p>
+</div>
+</div>
+</div><div class="pan-info">
+<a href="/community/detail/794.html" target="_blank" style="outline: none;">
+<p class="p1">我的第一天实习</p>
+<p class="p2">今天离开学校参加实习的第一天，一早起来就开始忙碌这。重庆的交通的确很拥挤，从学校到解放碑的华夏银行花了一个小时的时间。来到华夏银行的渝中支行，首先见到了负责带我们的渝中支行个人业务部的客户经理杨经理，和杨经理交谈后，大概给我们讲诉了一些银行的目前状况;然后杨经理给我们介绍认识了渝中支行个人业务部和公司业务部职员。渝中支行的各个领导见到我们三个实习后表示非常的高兴，因为他们好多员工也曾毕业于重庆工商大学，还有是因为现在渝中支行的各个部门工作比较繁忙，正是缺人手的时候，现在我们过来能过他们在工作上分担一些事物。上午的时间过得很快，下午主要是我们三个实习生在个人业务部办公室里看华夏银行渝中支行的相关资料，熟悉银行的发展史等。晚上回到宿舍，这才回过神来，自己大四了，马上就要离开校园了，即将真正的走上工作岗位了。
+</p>
+</a>
+<div class="pic1">
+<a class="box_pic" href="http://r2.cainiaobangbang.com/14/019d5919e4e495/594cc6ef8d692.jpg" data-lightbox="example-794">
+<img src="http://r2.cainiaobangbang.com/14/019d5919e4e495/594cc6ef8d692.jpg"/>
+</a>
+</div>
+<div class="evaluate">
+<div class="eval-i">
+<img class="eval-i1" src="http://r2.cainiaobangbang.com/15/019d55bc37791e/594cbde1e2dde.jpg" alt="" />
+<span class="eval-sp">真皮沙发66</span>
+<span class="eval-sp2">5天前</span>
+<p class="comment">
+<img src="/Public/img/log/comment.png"/>
+<span>0</span>
+</p>
+<p class="praise" data-iszan="" data-count="6">
+<span class="pra-i1">
+<img src="/Public/img/log/praise.png"/>
+</span> <span class="pra-sp1">6</span>
+</p>
+</div>
+</div>
+</div><div class="pan-info">
+<a href="/community/detail/791.html" target="_blank" style="outline: none;">
+<p class="p1">专业引领，沟通制胜 ----助理咨询顾问岗实习日志</p>
+<p class="p2">上学的时候，在网上通常会看到很多关于咨询的话题，比如：心理咨询，企业咨询等，虽然自己对咨询到底是什么，具体是怎么一回事情还不清楚，但是感觉咨询是个很了不起的职业，很神秘，很高大上，从研究生开始就一直心心念念着想要去做咨询类的工作。
+由于自己从没有过实习的经验，不知道现实的职场是什么样的，所以在实习之前，自己在网上查询了很多的资料，做了很多的准备工作。
+此次实习的岗位是助理咨询顾问，其服务的对象主要是银行的员工。由于之前自己没有相关的工作经验，所以在第一周的时间里，主要是学习相关的方法论的知识。刚开始的时候，自己认为不就是学习嘛，对自己来说小意思，自己对自己的学习能力还是很自信的，肯定没问题。但是当自己接触到真正需要学习的知识的时候才发现，完全不是自己想象的那样。
+学校里学习的只限于理论，没有涉及落地的问题；但是在职场中需要学习的理论是实实在在的落地的内容，不能只是死记硬背，需要有很强的理解能力和领悟能力。
+通过一周懵懵懂懂的学习，自己感觉学习到了很多东西，但是又感觉好像什么都没有学到，脑子里一团乱麻，不知道从哪儿下手，好在公司有专门的老师进行流程的梳理指导。
+1. 要有很强的学习能力。人都说：活到老，学到老。知识无止境，无论是做什么，都不能停止学习。尤其是在现实的职场中，谁的学习能力强，谁就能跑的比别人快！
+2. 要有很好的理解能力。职场中的学习，重要的不是学习的理论，而是学习的方法和理解的能力。职场中，不能是单纯的死记硬背，要寻找适合的方法，灵活的掌握学习的内容，要通过自己的理解和领悟，使得理论的知识转变为自己的东西！
+3. 要有很强大的逻辑思维能力。自己原本认为自己的逻辑能力满强的，但是在实际的职场中才发现，自己还有很长的路要走，在思维认知上，自己还不够成熟，还需要向身边的各位老师多多学习！
+</p>
+</a>
+<div class="pic1">
+<a class="box_pic" href="http://r2.cainiaobangbang.com/12/019d54acb07ec9/594cb76661e32.jpg" data-lightbox="example-791">
+<img src="http://r2.cainiaobangbang.com/12/019d54acb07ec9/594cb76661e32.jpg"/>
+</a>
+</div>
+<div class="evaluate">
+<div class="eval-i">
+<img class="eval-i1" src="http://r2.cainiaobangbang.com/16/019d4d57a457c8/594cb1ed00c91.jpg" alt="" />
+<span class="eval-sp">Sherryhu</span>
+<span class="eval-sp2">5天前</span>
+<p class="comment">
+<img src="/Public/img/log/comment.png"/>
+<span>1</span>
+</p>
+<p class="praise" data-iszan="" data-count="2">
+<span class="pra-i1">
+<img src="/Public/img/log/praise.png"/>
+</span> <span class="pra-sp1">2</span>
+</p>
+</div>
+</div>
+</div><div class="pan-info">
+<a href="/community/detail/790.html" target="_blank" style="outline: none;">
+<p class="p1">明天休息，大家开心吗？哈哈</p>
+<p class="p2"></p>
+</a>
+<div class="pic1">
+<a class="box_pic" href="http://r2.cainiaobangbang.com/12,019d49ab32599f" data-lightbox="example-790">
+<img src="http://r2.cainiaobangbang.com/12,019d49ab32599f"/>
+</a>
+</div>
+<div class="evaluate">
+<div class="eval-i">
+<img class="eval-i1" src="http://r2.cainiaobangbang.com/13,019d07b2a78afd" alt="" />
+<span class="eval-sp">高兴啊</span>
+<span class="eval-sp2">5天前</span>
+<p class="comment">
+<img src="/Public/img/log/comment.png"/>
+<span>2</span>
+</p>
+<p class="praise" data-iszan="" data-count="1">
+<span class="pra-i1">
+<img src="/Public/img/log/praise.png"/>
+</span> <span class="pra-sp1">1</span>
+</p>
+</div>
+</div>
+</div><div class="pan-info">
+<a href="/community/detail/789.html" target="_blank" style="outline: none;">
+<p class="p1">客服也是很有技术含量的工作（正经脸）</p>
+<p class="p2">人生中第一次实习，特别的激动，提早搜好路线和准备好较为正式点的服装赶去工作地点，实习的第一周，部门主管带我认识了公司的同事们，相对的都做了个自我介绍，但是人比较多，大多都没记住，没关系这并不影响我的热情。因为是第一天，工作相关的都还不是很清楚，领导开始和我说了要熟悉的网页内容，app功能操作和客服的基本用语，然后一下午我就在看这些资料，有些不明白的地方都圈出来，在qq上问了领导，内容熟悉的还不错，就是公司里面和学校兼职不同，没有人说话，只有不断敲打的键盘的声音，感觉到了些严肃。
+熟悉了两天以后，有了自己的后台账号，开始接一些简单的售前问题，对于服装材质是否褪色，是否缩水，是否起球，尺码颜色，尺码选择上等等一系列的问题，不过因为看了些话术，相对来说还是工作的比较愉快的，忙碌起来时间总是飞快，第一周基本业务接待售前，熟悉app，和物流反馈的流程，个人感觉接收的都还不错，没有遇到很大的问题，并且同事们也都挺帮助我的，都把我当成小妹妹照顾着，我不懂的地方询问都会有给我耐心的解答，感觉这边人都特别的亲切，越来越对实习工作充满了期待和热情了。</p>
+</a>
+<div class="pic2">
+<a class="box_pic" href="http://r2.cainiaobangbang.com/15/019d46a51d422c/594c901cc3347.jpg" data-lightbox="example-789"><img src="http://r2.cainiaobangbang.com/15/019d46a51d422c/594c901cc3347.jpg"/></a>
+</div><div class="pic2">
+<a class="box_pic" href="http://r2.cainiaobangbang.com/15/019d4791023143/594c90288df02.gif" data-lightbox="example-789"><img src="http://r2.cainiaobangbang.com/15/019d4791023143/594c90288df02.gif"/></a>
+</div> 
+<div class="evaluate">
+<div class="eval-i">
+<img class="eval-i1" src="http://r2.cainiaobangbang.com/15/019d48c4db52ca/594c9080a98ac.jpg" alt="" />
+<span class="eval-sp">CynthiaL</span>
+<span class="eval-sp2">5天前</span>
+<p class="comment">
+<img src="/Public/img/log/comment.png"/>
+<span>1</span>
+</p>
+<p class="praise" data-iszan="" data-count="1">
+<span class="pra-i1">
+<img src="/Public/img/log/praise.png"/>
+</span> <span class="pra-sp1">1</span>
+</p>
+</div>
+</div>
+</div><div class="pan-info">
+<a href="/community/detail/788.html" target="_blank" style="outline: none;">
+<p class="p1">行政助理的吐血分享</p>
+<p class="p2">听了学长学姐的建议在选择的实习公司的时候要好好了解一下再投递的果然是正确的，
+好的公司对于实习生入职也很重视，没有进去就直接安排工作开干，有为期两天的新人培训。
+新人培训期间不光是能了解公司的概况、架构、主营业务之类的，也有基本的职场礼貌教育、职场生活小常识、基本流程等对于初次踏足职场的菜鸟很有帮助的课程部分，感觉自己忐忑的心得到了“救赎”。
+我觉得这样的新人教育是这家家公司的魅力所在吧，接下来祈祷正式实习工作的时候自己不会表现得太烂。</p>
+</a>
+<div class="pic1">
+<a class="box_pic" href="http://r2.cainiaobangbang.com/15/019d4577636300/594c8f080a674.jpg" data-lightbox="example-788">
+<img src="http://r2.cainiaobangbang.com/15/019d4577636300/594c8f080a674.jpg"/>
+</a>
+</div>
+<div class="evaluate">
+<div class="eval-i">
+<img class="eval-i1" src="http://r2.cainiaobangbang.com/17/019d444fd92367/594c8de114ad6.jpg" alt="" />
+<span class="eval-sp">Y瑶摇</span>
+<span class="eval-sp2">5天前</span>
+<p class="comment">
+<img src="/Public/img/log/comment.png"/>
+<span>0</span>
+</p>
+<p class="praise" data-iszan="" data-count="0">
+<span class="pra-i1">
+<img src="/Public/img/log/praise.png"/>
+</span> <span class="pra-sp1">0</span>
+</p>
+</div>
+</div>
+</div><div class="pan-info">
+<a href="/community/detail/785.html" target="_blank" style="outline: none;">
+<p class="p1">大堂经理助理小白的心路历程</p>
+<p class="p2">今天是我到建设银行实习的第一天，也是我尝试走出校园，走进职场的第一天。
+由于之前我没有参加过任何实习活动，一大早我就紧张的自然醒了，作为一个职场小菜鸟，真的是又激动又有些忐忑不安。
+到了银行大厅，负责带我的师父已经早早的到了，他正帮忙打扫银行大厅，确保柜台前的椅子，签字笔都摆放整齐。
+师父用自己无声的行为给我上了职场第一课：敬业负责。在晨会上，我被分配到大堂经理助理的岗位，
+在师父的带领下，我开始学习大堂经理的着装要求，专业话术以及职业规范。
+随着校园人到职场人角色的转变，我的紧张感也渐渐被兴奋的工作状态取代。</p>
+</a>
+<div class="pic1">
+<a class="box_pic" href="http://r2.cainiaobangbang.com/15/019d34ff883d6e/594b924624299.jpg" data-lightbox="example-785">
+<img src="http://r2.cainiaobangbang.com/15/019d34ff883d6e/594b924624299.jpg"/>
+</a>
+</div>
+<div class="evaluate">
+<div class="eval-i">
+<img class="eval-i1" src="http://r2.cainiaobangbang.com/15/019d3370b7131a/594b9142eee9a.jpg" alt="" />
+<span class="eval-sp">灰倪腻</span>
+<span class="eval-sp2">6天前</span>
+<p class="comment">
+<img src="/Public/img/log/comment.png"/>
+<span>4</span>
+</p>
+<p class="praise" data-iszan="" data-count="6">
+<span class="pra-i1">
+<img src="/Public/img/log/praise.png"/>
+</span> <span class="pra-sp1">6</span>
+</p>
+</div>
+</div>
+</div><div class="pan-info">
+<a href="/community/detail/784.html" target="_blank" style="outline: none;">
+<p class="p1">充满鸡血的活动执行实习生</p>
+<p class="p2">今天是我做活动执行实习生的第一天，公司的HR热情的接待了我，
+给我安排了工位讲解了一些行为规范之后，就让我和大家简单了自我介绍了一下，第一次到职场工作，真的是又激动又紧张，也希望在接下来的工作中，我可以贡献自己绵薄的力量。
+公司的同事都很热情的和我打招呼，公司整个氛围比较轻松，活动部门的领导是一位非常有魅力的女领导，她发给我很多关于公司、部门和之前做过的活动的文案和PPT介绍，让我先熟悉公司和之前做过的活动，看了之后真的学习了很多，了解到一个成功的活动，首先要有一个鲜明的目标，配合这个目标安排活动，并在每一个环节监测效果，
+才能最终完成目标甚至超过目标。
+很快就到下班时间了，很多老师都留下来加班，
+因为是第一天上班，所以老师就让我提前下班了。
+期待明天！！！！！！（内心的小快乐）</p>
+</a>
+<div class="pic1">
+<a class="box_pic" href="http://r2.cainiaobangbang.com/14/019d31e96d7b33/594b8f631870f.jpg" data-lightbox="example-784">
+<img src="http://r2.cainiaobangbang.com/14/019d31e96d7b33/594b8f631870f.jpg"/>
+</a>
+</div>
+<div class="evaluate">
+<div class="eval-i">
+<img class="eval-i1" src="http://r2.cainiaobangbang.com/12/019d30962a4116/594b8953ce509.jpg" alt="" />
+<span class="eval-sp">Drzz</span>
+<span class="eval-sp2">6天前</span>
+<p class="comment">
+<img src="/Public/img/log/comment.png"/>
+<span>4</span>
+</p>
+<p class="praise" data-iszan="" data-count="5">
+<span class="pra-i1">
+<img src="/Public/img/log/praise.png"/>
+</span> <span class="pra-sp1">5</span>
+</p>
+</div>
+</div>
+</div> 
+</div>
+</div>
+</article>
+</div>
+<div class="con-r">
+<img src="http://r2.cainiaobangbang.com/13/019d13e36b1274/楦熷发-01.jpg"/ class="con-r-i">
+<p class="con-r-p1">鸟巢</p>
+<p class="con-r-p2">日志：<span>9 </span>&nbsp;&nbsp;赞：<span>35</span></p>
+<p class="con-r-p3">鸟巢社区为大家提供干货，帮助大家更好的飞翔！</p>
+<a class="con-r-a" href="/community/editLog.html">发布日志</a>
+<p class="gzsm" onclick="$('.js_rule_popup').fadeIn();">活动规则说明</p>
+</div>
+<div class="con-r2">
+<div class="con-ljcy">
+<p class="ljcy">立即参与“陆家嘴金融城未来金融家”活动<br />开启实习之旅发布日志，赢巨额现金大奖</p>
+<a href="//ljz.cainiaobangbang.com" class="ljxq">了解详情</a>
+</div>
+<div class="con-k">
+<p class="con-r2-p2">
+<a class="con-r2-a1" href="http://a.app.qq.com/o/simple.jsp?pkgname=com.finance.cainiaobangbang">iOS下载</a>
+<a class="con-r2-a2" href="http://a.app.qq.com/o/simple.jsp?pkgname=com.finance.cainiaobangbang">Android下载</a>
+</p>
+<p class="con-r2-p3">
+<img src="/Public/img/log/cnbb.png" alt="" />
+</p>
+</div>
+<p class="con-r2-p1">下载菜鸟帮帮APP，发布语音视频日志。</p>
+</div>
+</div>
+</div>
+<div class="pltk js_comment_del" style="display:none;">
+<div class="pltk-info">
+<div class="pltk-info-con">
+<img src="/Public/img/log/xx.png" alt="" class="xx" onclick="$('.js_comment_del').hide();" />
+<p class="pltk-info-con-p">确定删除该评论吗？</p>
+<input class="pltk-info-con-i" type="button" value="确定" onclick="delCommentsubmit();" />
+</div>
+</div>
+</div>
+<div class="pltk" style="display:none;">
+<div class="pltk-info">
+<div class="pltk-info-con">
+<img src="/Public/img/log/xx.png" alt="" class="xx2" />
+<p class="pltk-info-con-p2">确定删除该日志吗？</p>
+<input class="pltk-info-con-i2" type="button" value="确定" />
+</div>
+</div>
+</div>
+<div class="pltk js_live_tips pltk-zb" style="display:none;">
+<div class="pltk-info">
+<div class="pltk-info-con">
+<img src="/Public/img/log/xx.png" alt="" class="xx2" onclick="$('.js_live_tips').fadeOut();"/>
+<p class="pltk-info-con-p2">直播守则</p>
+<p class="pltk-info-con-p3">1、不能以任何形式播放和宣传带有色情、暴力血腥、消极反动以及有擦边球嫌疑的节目；</p>
+<p class="pltk-info-con-p3">2、禁止播放国家明令禁止的视听类节目；</p>
+<p class="pltk-info-con-p3">3、禁止宣传非本直播平台的链接；</p>
+<p class="pltk-info-con-p3">4、禁止发虚假广告，兼职广告；</p>
+<p class="pltk-info-con-p3">守则内容包括但不限于以上内容，平台保留最终解释权 。违反的主播除了关闭直播间外，我们还将保留追究相应的法律责任的权利。</p>
+<input class="pltk-info-con-i2" type="button" value="我知道了" onclick="$('.js_live_tips').fadeOut();" />
+</div>
+</div>
+</div>
+<div class="pltk js_live_shenqing" style="display:none;">
+<div class="pltk-info">
+<div class="pltk-info-con">
+<img src="/Public/img/log/xx.png" alt="" class="xx2" onclick="$('.js_live_shenqing').fadeOut();"/>
+<p class="pltk-info-con-p2 sqsj">我要申请直播的时间</p>
+<input type="text" class="start_time" id="input1" placeholder="开始时间"/>
+<input type="text" class="end_time" id="input2" placeholder="结束时间"/>
+<p class="zbjj">直播简介</p>
+<textarea id="message4" name="message3" class="description" placeholder="简单写写你想直播的内容"></textarea>
+<p>直播方式在菜鸟帮帮App进行，请下载App客户端。</p>
+<input type="checkbox" id="zb" value="" /><span class="zbs">我已阅读</span><span class="zbsz" onclick="$('.js_live_tips').fadeIn();">直播守则</span>
+<input class="pltk-info-con-i4 js_submit_zbsq" type="button" value="提交" />
+</div>
+</div>
+</div>
+<div class="pltk js_rule_popup" style="display:none;">
+<div class="pltk-info">
+<div class="pltk-info-con">
+<img src="/Public/img/log/xx.png" alt="" class="xx2" onclick="$('.js_rule_popup').fadeOut();" />
+<p class="pltk-info-con-p3 pp3">1.在菜鸟帮帮微信平台回复“实习”，获取活动参赛链接。<br />2.在参赛链接上分享你的实习故事，并上传至少三张与实习相关的照片。<br />3.组委会还会为优秀的学生进行专访并为其撰写稿件，有兴趣的同学也可以添加活动客服微信：wyn160403申请专访资格。<br />4.组委会人员审核通过的优质内容，才有参赛资格。<br />5.暑假实习期结束后，组委会人员会将所有审核通过的优质内容汇总并进行专题投票活动，赢取200-3000元不等的奖金，并有机会获得优秀实习日志奖。</p>
+<p class="pltk-info-con-p3">*活动详细说明见社区置顶帖</p>
+<button class="pltk-info-con-i2" onclick="$('.js_rule_popup').fadeOut();">确定</button>
+</div>
+</div>
+</div>
+<!--end-->
+<div class="page-bottom">
+<div class="bottom-info">
+<div class="bottom-nav">
+<a class="sub-bottom-nav" href="/about/aboutUs.html">关于我们</a>
+<a class="sub-bottom-nav" href="/about/mileStone.html">大事记</a>
+<a class="sub-bottom-nav" href="/about/ourPartner.html">合作伙伴</a>
+<a class="sub-bottom-nav" href="/about/joinUs.html">招贤纳士</a>
+<a class="sub-bottom-nav" href="/about/contactUs.html">联系我们</a>
+<div class="icp">
+<a href="#">Copyright by cainiaobangbang.com</a>
+<p><a href="http://www.miitbeian.gov.cn/" target="_blank">沪ICP备15055517号</a>@2017 cainiaobangbang.com All rights reserved</p>
+</div>
+</div>
+<div class="bottom-code">
+<div class="user-code">
+<div class="code-box">
+<div class="code-item">
+<div class="code-img"><img src="/Public/img/index_img/app_code.jpg"/></div>
+<p class="code-info">App下载</p>
+</div>
+<div class="code-item">
+<div class="code-img"><img src="/Public/img/index_img/cnbb_code.jpg"/></div>
+<p class="code-info">微信公众号</p>
+</div>
+</div>
+<p class="code-type">学生用户</p>
+</div>
+<div class="user-code">
+<div class="code-box">
+<div class="code-item">
+<div class="code-img"><img src="/Public/img/index_img/cnbb_org_code.jpg"/></div>
+<p class="code-info">企业二维码</p>
+</div>
+</div>
+<p class="code-type">企业用户</p>
+</div>
+</div>
+</div>
+</div>
+<script src="/Public/js/style_s1.js?201706281"></script>
+<script src="/Public/js/style.js?20170628"></script>
+<script src="/Public/js/jquery.lazyload.js?20170628"></script>
+<script src="/Public/js/validate/lib/jquery.form.js?20170628"></script>
+<script src="/Public/js/validate/dist/jquery.validate.js?20170628"></script>
+<script src="/Public/js/validate/dist/localization/messages_zh.js?20170628"></script>
+<script src="/Public/js/common.js?201706282"></script>
+<script type="text/javascript" src="http://api.map.baidu.com/api?v=2.0&ak=QE14lsaHjpl3lTkpSIKOcGnKYpPt68zu"></script>
+<script type="text/javascript" src="/Public/js/log/weixinAudio.js"></script>
+<script src="/Public/js/jobList.js?v=1.6"></script>
+<script type="text/javascript" src="/Public/js/log/plyr.js"></script>
+<script type="text/javascript" src="/Public/js/log/log.js"></script>
+<script src="/Public/js/jquery.page.js"></script>
+<script type="text/javascript">
+		$(function(){
+			$('.lab1').on('click',function(){
+				$('.lab1').css('background','#FFC400').css('color','#fff');
+				$('.lab2').css('background','#fff').css('color','black');
+				$('.lab3').css('background','#fff').css('color','black');
+			})
+			$('.lab2').on('click',function(){
+				$('.lab2').css('background','#FFC400').css('color','#fff');
+				$('.lab1').css('background','#fff').css('color','black');
+				$('.lab3').css('background','#fff').css('color','black');
+			})
+			$('.lab3').on('click',function(){
+				$('.lab3').css('background','#FFC400').css('color','#fff');
+				$('.lab2').css('background','#fff').css('color','black');
+				$('.lab1').css('background','#fff').css('color','black');
+			})
+		//视频播放
+		plyr.setup();
+		//音频：		
+//  var audios = $(".weixinAudio").find("audio");
+//  $(".audio_area").each(function (index) {	 
+//      var s = index;      
+//      $(this).on("click",function () {
+//         //$(this).parent().find('audio')[0].play();
+//         
+//         $('.plyr audio').each(function (index1) {
+//              if (s != index1){
+//                  $(this)[0].pause();
+////                  $(this)[0].currentTime = 0;
+//                  //$('.audio_area').removeClass('playing'); 
+//                  //alert(123);
+//              }else{
+//              	
+//              }
+//          });
+//          var audios = $(this).parent().find('.plyr audio')[0];
+////          if (audios.paused) {
+////             //audios.play();
+////              //alert(3434)
+//////              alert(2222222)
+//////              $('#audio_area').addClass('playing');
+////          } else {
+////             $(this)[0].pause();
+////              audio.currentTime = 0;
+//////              $('#audio_area').removeClass('playing')
+////          }
+////          $(this).on("ended",function () {
+////          	$(this)[0].currentTime = 0;
+//////              $(this).parent().find(".icon_audio_area").removeClass("playing");
+////          })
+//      })
+//  })
+   
+	//截取第一帧开始
+		(function(){
+		var video, output;
+		var scale = 0.8;
+		var initialize = function() {
+		    output = document.getElementById("output");
+		    video = document.getElementById("video");
+		    video.addEventListener('loadeddata',captureImage);
+		};
+		var captureImage = function() {
+		    var canvas = document.createElement("canvas");
+		    canvas.width = video.videoWidth * scale;
+		    canvas.height = video.videoHeight * scale;
+		    canvas.getContext('2d').drawImage(video, 0, 0, canvas.width, canvas.height);
+		 
+		    var img = document.createElement("img");
+		    img.src = canvas.toDataURL("image/png");
+		    img.width = 400;
+		    img.height = 300;
+		    output.appendChild(img);
+		};
+		initialize();
+   })();
+  //截取end				
+			
+			
+			
+		})
+
+    $(".tcdPageCode").createPage({
+        pageCount:1,
+        current:1,
+        backFn:function(p){
+        	window.location.href = '/community/list.html?p='+p;
+        }
+    });
+
+
+
+	</script>
+</body>
+</html>
